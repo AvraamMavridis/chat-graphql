@@ -1,0 +1,17 @@
+@import '../../vars.scss';
+
+.onlineUsersContainer {
+  background: $dark;
+
+  .title {
+    background: #2E2E4F;
+    color: $light;
+    @include roboto(10);
+    box-shadow: 0 2px 4px 0 rgba(43,43,71,0.19);
+    padding: 20px 0px;
+    text-align: center;
+    border-bottom: 1px solid $light;
+    box-shadow: 0 2px 4px 0 rgba(43,45,73,0.24);
+  }
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.slim.js"></script>
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+  <title>Movies PWA</title>
+  <link rel="stylesheet"
+    href="css/normalize.css">
+
+  <link rel="stylesheet"
+    href="css/cutegrids.css">
+
+  <link rel="manifest"
+    href="./manifest.json">
+
+  <link rel="icon"
+    type="image/png"
+    href="assets/images/favicon-32x32.png"
+    sizes="32x32">
+
+  <link rel="icon"
+    type="image/png"
+    href="assets/images/favicon-16x16.png"
+    sizes="16x16">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto|Open+Sans');
+  </style>
+
+  <noscript style="background-color: #2C3A57">
+    You can't talk to anyone if you don't speek javascript.
+  </noscript>
+
+  <style>
+    .no-margin {
+      margin: 0px !important;
+    }
+    .no-padding {
+      padding: 0px !important;
+    }
+
+    .full-height, html {
+      height: 100%;
+    }
+    [class*=cute-]:last-of-type {
+      float: left;
+    }
+  </style>
+</head>
+
+<body class="no-padding no-margin full-height">
+  <div class="no-padding no-margin full-height" id="root" />
+</body>
+</html>

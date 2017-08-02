@@ -1,0 +1,77 @@
+$dark: #2E2E4F;
+$light: #CAC8EE;
+$white: #DAD8FA;
+
+@mixin roboto($px){
+  font-family: 'Roboto', sans-serif;
+  font-size: rem($px);
+}
+
+@mixin opensans ($px){
+  font-family: 'Open Sans', sans-serif;
+  font-size: rem($px);
+}
+
+@mixin quicksand ($px){
+  font-family: Quicksand;
+  font-size: rem($px);
+}
+
+@function rem($px) {
+  @return #{$px / 10}rem;
+}
+
+
+@mixin mobile($orientation: all) {
+  $device_minimum_width: 0px;
+  $device_maximum_width: 767px;
+
+  @if $orientation == all {
+    @media only screen and (min-device-width: $device_minimum_width) and (max-device-width: $device_maximum_width) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (min-device-width: $device_minimum_width) and (max-device-width: $device_maximum_width) and (orientation: #{$orientation}) {
+      @content;
+    }
+  }
+}
+
+// Tablet
+@mixin tablet($orientation: all) {
+  @if $orientation == all {
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) {
+      @content;
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+      @content;
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 2) {
+      @content;
+    }
+
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) {
+      @content;
+    }
+  }
+  @else {
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: #{$orientation}) {
+      @content;
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: #{$orientation}) {
+      @content;
+    }
+
+    @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: #{$orientation}) {
+      @content;
+    }
+
+    @media screen and (device-width: 601px) and (device-height: 906px) and (-webkit-min-device-pixel-ratio: 1.331) and (-webkit-max-device-pixel-ratio: 1.332) and (orientation: #{$orientation}) {
+      @content;
+    }
+  }
+}
