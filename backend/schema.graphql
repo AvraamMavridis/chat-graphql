@@ -1,14 +1,14 @@
 scalar Date
 
 type Message {
-  id: ID
-  msg: String
+  id: ID!
+  msg: String!
   date: Date
 }
 
 type User {
-  id: ID
-  name: String
+  id: ID!
+  name: String!
   avatar: String
 }
 
